@@ -117,7 +117,7 @@ RUBY
         # rename project related files
         ["PROJECT-Info.plist", "PROJECT-Prefix.pch", "PROJECT.entitlements"].each do |file|
           before = project_folder + "/PROJECT/" + file
-          next unless File.exists? before
+          next unless File.exist? before
 
           after = project_folder + "/PROJECT/" + file.gsub("PROJECT", @configurator.pod_name)
           File.rename before, after
